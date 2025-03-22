@@ -4,6 +4,8 @@ const cors = require('cors');
 
 const app = express();
 const port = 5000;
+const allowedOrigins = ['https://image-price-compare.vercel.app/'];
+app.use(cors({ origin: allowedOrigins }));
 
 // Enable CORS
 app.use(cors());
